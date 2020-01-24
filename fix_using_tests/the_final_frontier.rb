@@ -1,10 +1,12 @@
+require 'pry'
 def generate_star_date
-  (rand(100000) + 400000) / 10.0
+  star_date = (rand(100000) + 400000) / 10.0
+  star_date
 end
 
 
 def state_log(star_date)
-  "Captain's Log, star date #{star_date}."
+  puts "Captain's Log, star date #{star_date}."
 end
 
 def crew
@@ -12,7 +14,8 @@ def crew
 end
 
 def greet_crew (crew)
-  crew.each {|crew_member| "Hello #{crew_member}."}
+  new_array = crew.map {|crew_member| "Hello #{crew_member}."}
+  new_array
 end
 
 def engage
